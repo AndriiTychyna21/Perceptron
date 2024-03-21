@@ -188,4 +188,22 @@ public class Trainer extends Perceptron{
         return totalE;
     }
 
+    public void weights(){
+        for (int i = 0; i < HIDDEN; i++){
+            for (int j = 0; j < hiddenLayer.length; j++){
+                for (int w = 0; w < hiddenLayer[j][i].getInputNumber(); w++){
+                    System.out.printf("%10s ", hiddenLayer[j][i].getW(w));
+                }
+                System.out.printf("%10s", "");
+            }
+            System.out.println("\n");
+        }
+        for (int j = 0; j < OUTPUT; j++){
+            for (int w = 0; w < outputLayer[j].getInputNumber(); w++){
+                System.out.printf("%10s ", outputLayer[j].getW(w));
+            }
+            System.out.printf("%10s", "");
+        }
+        System.out.println("\n");
+    }
 }

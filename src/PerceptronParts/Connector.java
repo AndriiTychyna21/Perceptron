@@ -1,12 +1,14 @@
 package PerceptronParts;
 
+import java.util.Random;
+
 public class Connector {
     private double input;
     private double w;
 
     public Connector(){
-        this.w = 0.5;
-
+        Random random = new Random();
+        this.w = 0.4 + random.nextDouble() * 0.2;
     }
 
     public Connector(double w){
